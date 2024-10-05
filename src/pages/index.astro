@@ -1,0 +1,231 @@
+---
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona dla Błazeja Bolka</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <style>
+    .glide__track {
+        overflow: initial !important;
+    }
+    html, body {
+        @apply overflow-x-hidden;
+    }
+</style>
+
+</head>
+<body class="font-sans">
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold">Your Agency Logo</div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#services" class="hover:text-gray-700">Services</a>
+                    <a href="#bundles" class="hover:text-gray-700">Bundles</a>
+                    <a href="#case-studies" class="hover:text-gray-700">Case Studies</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="h-screen flex items-center justify-center bg-gray-100">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-4">Your Agency Tagline</h1>
+                    <p class="text-xl mb-8">Boost your digital presence with our expert services</p>
+                    <a href="#calendly-link" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600">Schedule a Call</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="/images/hero-image-placeholder.png" alt="Hero Image" class="rounded-lg shadow-md" />
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="h-screen py-16 bg-white flex items-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8 text-center">What, Who, and How</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">What We Do</h3>
+                        <p>We provide comprehensive digital marketing solutions to help businesses thrive online.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Who We Are</h3>
+                        <p>A team of passionate digital experts committed to your success.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">How We Work</h3>
+                        <p>We use data-driven strategies and cutting-edge techniques to deliver results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="h-screen py-16 bg-gray-100 flex items-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8 text-center">Our Services</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Digital Ads</h3>
+                        <p>Targeted advertising campaigns to reach your ideal audience.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">SEO</h3>
+                        <p>Optimize your website to rank higher in search results.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Video Creation</h3>
+                        <p>Engaging video content to captivate your audience.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Social Media Marketing</h3>
+                        <p>Build your brand and engage with your community on social platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bundles" class="h-screen py-16 bg-white flex items-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8 text-center">Our Bundles</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Starter Bundle</h3>
+                        <ul class="mb-6">
+                            <li>Digital Ads</li>
+                            <li>Basic SEO</li>
+                        </ul>
+                        <a href="#calendly-link" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Book Now</a>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Growth Bundle</h3>
+                        <ul class="mb-6">
+                            <li>Digital Ads</li>
+                            <li>Advanced SEO</li>
+                            <li>Video Creation</li>
+                        </ul>
+                        <a href="#calendly-link" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Book Now</a>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Premium Bundle</h3>
+                        <ul class="mb-6">
+                            <li>Digital Ads</li>
+                            <li>Advanced SEO</li>
+                            <li>Video Creation</li>
+                            <li>Social Media Marketing</li>
+                        </ul>
+                        <a href="#calendly-link" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-studies" class="py-16 bg-gray-100 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8 text-center">Case Studies</h2>
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides">
+                        <li class="glide__slide">
+                          <div class="bg-white rounded-lg shadow-md p-6">
+                            <img src="/images/case-study-1-placeholder.png" alt="Case Study 1" class="w-full h-48 object-cover mb-4 rounded" />
+                            <h3 class="text-xl font-semibold mb-4">Case Study 1</h3>
+                            <p>Brief description of the project and results achieved.</p>
+                          </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="bg-white rounded-lg shadow-md p-6">
+                              <img src="/images/case-study-2-placeholder.png" alt="Case Study 1" class="w-full h-48 object-cover mb-4 rounded" />
+                              <h3 class="text-xl font-semibold mb-4">Case Study 2</h3>
+                              <p>Brief description of the project and results achieved.</p>
+                            </div>
+                          </li>
+                          <li class="glide__slide">
+                            <div class="bg-white rounded-lg shadow-md p-6">
+                              <img src="/images/case-study-3-placeholder.png" alt="Case Study 1" class="w-full h-48 object-cover mb-4 rounded" />
+                              <h3 class="text-xl font-semibold mb-4">Case Study 3</h3>
+                              <p>Brief description of the project and results achieved.</p>
+                            </div>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section id="cta" class="h-screen flex items-center justify-center bg-gray-100">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">Not Quite Sure? Find Out With Us</h2>
+                    <p class="text-xl mb-8">Let's discuss how we can help your business grow</p>
+                    <a href="#calendly-link" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600">Schedule a Free Consultation</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="/images/cta-image-placeholder.png" alt="CTA Image" class="rounded-lg shadow-md" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Your Agency Name</h3>
+                    <p>Elevating your digital presence</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="#services" class="hover:text-gray-300">Services</a></li>
+                        <li><a href="#bundles" class="hover:text-gray-300">Bundles</a></li>
+                        <li><a href="#case-studies" class="hover:text-gray-300">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                    <p>Email: info@youragency.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-300">Facebook</a>
+                        <a href="#" class="hover:text-gray-300">Twitter</a>
+                        <a href="#" class="hover:text-gray-300">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 Your Agency Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+  
+  <script>
+    import Glide from '@glidejs/glide'
+
+    new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 1,
+        gap: 20
+    }).mount()
+
+  </script>
+
+</body>
+</html>

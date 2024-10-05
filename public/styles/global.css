@@ -1,0 +1,123 @@
+/* Basic global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.full-height {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  background-color: #222;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.hero-section {
+  display: flex;
+  background: url('/images/hero-placeholder.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-content {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.hero-text {
+  color: white;
+}
+
+.hero-button {
+  background-color: #007BFF;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.about-section, .services-section, .bundles-section, .case-studies-section, .contact-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.service-box {
+  background-color: #f1f1f1;
+  padding: 2rem;
+  transition: transform 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.bundles-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bundle-box {
+  background-color: #007BFF;
+  padding: 2rem;
+  color: white;
+  margin: 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+.case-studies-section .swiper-container {
+  width: 80%;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-image img {
+  max-width: 100%;
+}
+
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-content img {
+  height: 30px;
+  margin-bottom: 0.5rem;
+}
+
+/* In your global.css or similar */
+@import '@glidejs/glide/dist/css/glide.core.min.css';
+/* If you want the default theme (optional) */
+@import '@glidejs/glide/dist/css/glide.theme.min.css';
