@@ -1,14 +1,121 @@
+---
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+---
+
 <html lang="en">
     <head>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Required Core Stylesheet -->
+        <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+        <!-- Optional Theme Stylesheet -->
+        <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+        <style>
+            .glide__track {
+                overflow: initial !important;
+            }
+            html, body {
+                @apply overflow-x-hidden;
+            }
+        </style>
     </head>
     <body class="w-screen h-screen">
-        <swiper-container class="w-screen h-screen">
-            <swiper-slide class="justify-center items-center flex">Slide 1</swiper-slide>
-            <swiper-slide class="justify-center items-center flex">Slide 2</swiper-slide>
-            <swiper-slide class="justify-center items-center flex">Slide 3</swiper-slide>
-            <swiper-slide class="justify-center items-center flex">Slide ...</swiper-slide>
-        </swiper-container>
+        <h1 class="font-bold m-4 text-4xl">Glider's swiper</h1>
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                        <img src="/images/case-study-1-placeholder.png" alt="Case Study 1" class="w-full h-48 object-cover mb-4 rounded" />
+                        <h3 class="text-xl font-semibold mb-4">Case Study 1</h3>
+                        <p>Brief description of the project and results achieved.</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <img src="/images/case-study-2-placeholder.png" alt="Case Study 1" class="w-full h-48 object-cover mb-4 rounded" />
+                            <h3 class="text-xl font-semibold mb-4">Case Study 2</h3>
+                            <p>Brief description of the project and results achieved.</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <img src="/images/case-study-3-placeholder.png" alt="Case Study 1" class="w-full h-48 object-cover mb-4 rounded" />
+                            <h3 class="text-xl font-semibold mb-4">Case Study 3</h3>
+                            <p>Brief description of the project and results achieved.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h1 class="font-bold m-4 text-4xl">SwiperJS swiper</h1>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img src="/images/case-study-1-placeholder.png" alt="Case Study 1" class="w-full h-48 object-cover mb-4 rounded" />
+                        <h3 class="text-xl font-semibold mb-4">Case Study 1</h3>
+                        <p>Brief description of the project and results achieved.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img src="/images/case-study-2-placeholder.png" alt="Case Study 2" class="w-full h-48 object-cover mb-4 rounded" />
+                        <h3 class="text-xl font-semibold mb-4">Case Study 2</h3>
+                        <p>Brief description of the project and results achieved.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img src="/images/case-study-3-placeholder.png" alt="Case Study 3" class="w-full h-48 object-cover mb-4 rounded" />
+                        <h3 class="text-xl font-semibold mb-4">Case Study 3</h3>
+                        <p>Brief description of the project and results achieved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
+    <script>
+        import Swiper from 'swiper';
+        import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper('.swiper-container', {
+                modules: [Navigation, Pagination, Autoplay],
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                loopAdditionalSlides: 2, // Preload 2 slides for smoother infinite loop
+                slideToClickedSlide: true, // Makes swiping easier to trigger
+                touchRatio: 2, // Increases touch sensitivity
+                speed: 800, // Transition speed in ms
+                autoplay: {
+                    delay: 3000, // Autoplay interval in ms
+                    disableOnInteraction: false, // Continue autoplay after user interaction
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+    <script>
+        import Glide from '@glidejs/glide'
+    
+        new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 1,
+            gap: 20
+        }).mount()
+    
+    </script>
 </html>
