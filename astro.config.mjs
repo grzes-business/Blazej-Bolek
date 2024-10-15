@@ -7,5 +7,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://grzes-business.github.io',
-  base: 'my-repo'
+  base: 'blazej-bolek'
 });
